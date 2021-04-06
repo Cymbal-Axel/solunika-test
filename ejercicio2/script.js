@@ -8,12 +8,19 @@ function palindromes(a, b, c, d) {
         }
         var n = numeros[i].toString();
         if (n === n.split('').reverse().join('')) {
-            console.log("es palindromo")
+            console.log(n + " " + "es palindromo")
         } else {
-            console.log("no es palindromo")
+            console.log(n + " " + "no es palindromo")
         }
-
     }
+    console.log(numeros.sort(function(prev, next) {
+        if (prev > next) {
+            return 1;
+        }
+        if (prev < next) {
+            return -1;
+        }
+        return 0;
+    }));
 }
-
-palindromes(121, 223, 232, "cuatro");
+palindromes(121, 353, 223, "cuatro")
